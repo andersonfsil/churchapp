@@ -14,8 +14,8 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 
 @RestController
-@RequestMapping(value="/usuario")
-public class UsuarioResource {
+@RequestMapping(value="/pedido")
+public class PedidoResource {
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public String listar() {

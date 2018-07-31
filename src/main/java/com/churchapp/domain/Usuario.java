@@ -3,10 +3,14 @@ package com.churchapp.domain;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+@Entity
 public class Usuario implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
@@ -18,6 +22,7 @@ public class Usuario implements Serializable {
 	private String senha;
 	private String tipoUsuario;
 	private String sexo;
+	@JsonFormat(pattern="dd/MM/yyyy")
 	private Date dataNascimento;
 	private String nickname;
 	
